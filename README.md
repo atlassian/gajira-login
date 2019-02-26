@@ -1,9 +1,14 @@
 # Jira Login
-Used to store credentials for later use in CLI action
+Used to store credentials for later use by other actions
 
 ## Usage
 
-TBD
+```
+action "Jira Login" {
+  uses = "./"
+  secrets = ["JIRA_BASE_URL", "JIRA_USER_EMAIL", "JIRA_API_TOKEN"]
+}
+```
 
 ----
 ## Action Spec:
