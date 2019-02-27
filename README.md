@@ -1,5 +1,5 @@
 # Jira Login
-Used to store credentials for later use by other [Jira Actions](https://github.com/atlassian/gajira)
+Used to store credentials for later use by other Jira Actions
 
 This is required by other actions like:
 - [`Transition`](https://github.com/marketplace/actions/jira-transition) - Transition a Jira issue
