@@ -2,6 +2,7 @@
 Used to store credentials for later use by other Jira Actions
 
 For examples on how to use this, check out the [gajira-demo](https://github.com/atlassian/gajira-demo) repository
+> ##### Only supports Jira Cloud. Does not support Jira Server (hosted)
 
 This is required by other actions like:
 - [`Transition`](https://github.com/marketplace/actions/jira-transition) - Transition a Jira issue
