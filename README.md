@@ -15,23 +15,31 @@ This is required by other actions like:
 ## Usage
 An example workflow to create a Jira issue for each `//TODO` in code:
 
-```
-workflow "Todo issue" {
-  on = "push"
-  resolves = ["Jira Login"]
-}
+```yaml
+on: push
 
-action "Jira Login" {
-  uses = "atlassian/gajira-login@master"
-  secrets = ["JIRA_BASE_URL", "JIRA_API_TOKEN", "JIRA_USER_EMAIL"]
-}
+name: Jira Example
 
-action "Jira TODO" {
-  needs = "Jira Login"
-  uses = "atlassian/gajira-todo@master"
-  secrets = ["GITHUB_TOKEN"]
-  args = "--project=GA --issuetype=Task"
-}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Jira Example
+    steps:
+    - name: Login
+      uses: atlassian/gajira-login@master
+      env:
+        JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+        JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
+        JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+
+    - name: Jira TODO
+      uses: atlassian/gajira-todo@master
+      with:
+        project: GA
+        issuetype: Task
+        description: Created automatically via GitHub Actions
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 More examples at [gajira-demo](https://github.com/atlassian/gajira-demo) repository
