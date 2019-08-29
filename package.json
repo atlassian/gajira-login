@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@atlassian-partner-engineering/eslint-config": "^2.3.2",
+    "@zeit/ncc": "^0.20.4",
     "eslint": "^5.13.0"
   }
 }
