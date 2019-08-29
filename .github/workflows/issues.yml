@@ -1,0 +1,9 @@
+on: issues
+name: Test on issues
+jobs:
+  jiraLogin-1:
+    name: Jira Login-1
+    runs-on: ubuntu-latest
+    steps:
+    - name: Jira Login-1
+      uses: ./

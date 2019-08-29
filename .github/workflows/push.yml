@@ -1,0 +1,9 @@
+on: push
+name: Test
+jobs:
+  jiraLogin:
+    name: Jira Login
+    runs-on: ubuntu-latest
+    steps:
+    - name: Jira Login
+      uses: ./
