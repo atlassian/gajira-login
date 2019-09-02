@@ -4,7 +4,9 @@
   "description": "Used to store credentials for later use in CLI action",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js --minify",
+    "watch": "ncc build index.js --watch --minify"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@atlassian-partner-engineering/eslint-config": "^2.3.2",
+    "@zeit/ncc": "^0.20.4",
     "eslint": "^5.13.0"
   }
 }

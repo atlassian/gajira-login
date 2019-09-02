@@ -1,0 +1,5 @@
+name: 'Jira Login'
+description: 'Log in to Jira Cloud instance'
+runs:
+  using: 'node12'
+  main: './dist/index.js'
