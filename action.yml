@@ -1,5 +1,8 @@
 name: 'Jira Login'
 description: 'Log in to Jira Cloud instance'
+branding:
+  icon: 'log-in'
+  color: 'blue'
 runs:
   using: 'node12'
   main: './dist/index.js'
