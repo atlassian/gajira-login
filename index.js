@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 const YAML = require('yaml')
+const execa = require('execa')
 
 const cliConfigPath = `${process.env.HOME}/.jira.d/config.yml`
-const cliCredentialsPath = `${process.env.HOME}/.jira.d/credentials`
 const configPath = `${process.env.HOME}/jira/config.yml`
 
 const Action = require('./action')
@@ -45,9 +45,13 @@ async function exec () {
       fs.writeFileSync(cliConfigPath, YAML.stringify({
         endpoint: result.baseUrl,
         login: result.email,
+        'password-source': 'stdin',
       }))
 
-      fs.writeFileSync(cliCredentialsPath, `JIRA_API_TOKEN=${result.token}`)
+      const gojira = execa('jira', ['login'])
+
+      gojira.stdin.write(result.token)
+      gojira.stdin.end()
 
       return
     }
