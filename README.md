@@ -5,11 +5,11 @@ For examples on how to use this, check out the [gajira-demo](https://github.com/
 > ##### Only supports Jira Cloud. Does not support Jira Server (hosted)
 
 This is required by other actions like:
-- [`Transition`](https://github.com/marketplace/actions/jira-transition) - Transition a Jira issue
-- [`Comment`](https://github.com/marketplace/actions/jira-comment) - Add a comment to a Jira issue
-- [`Create`](https://github.com/marketplace/actions/jira-create) - Create a new Jira issue
-- [`Find issue key`](https://github.com/marketplace/actions/jira-find) - Search for an issue key in commit message, branch name, etc. This issue key is then saved and used by the next actions in the same workflow
-- [`TODO`](https://github.com/marketplace/actions/jira-todo) - Create a Jira issue for each TODO comment in committed code
+- [`Jira Issue Transition`](https://github.com/marketplace/actions/jira-issue-transition) - Transition a Jira issue
+- [`Jira Add Comment`](https://github.com/marketplace/actions/jira-add-comment) - Add a comment to a Jira issue
+- [`Jira Create Issue`](https://github.com/marketplace/actions/jira-create-issue) - Create a new Jira issue
+- [`Jira Find Issue Key`](https://github.com/marketplace/actions/jira-find-issue-key) - Search for an issue key in commit message, branch name, etc. This issue key is then saved and used by the next actions in the same workflow
+- [`Jira Issue From TODO`](https://github.com/marketplace/actions/jira-issue-from-todo) - Create a Jira issue for each TODO comment in committed code
 - [`CLI`](https://github.com/marketplace/actions/jira-cli) - Wrapped [go-jira](https://github.com/Netflix-Skunkworks/go-jira) CLI for common Jira actions
 
 ## Usage
