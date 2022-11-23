@@ -1,6 +1,6 @@
 {
-  "name": "login",
-  "version": "3.0.0",
+  "name": "@atlassian/gajira-login",
+  "version": "3.0.1",
   "description": "Used to store credentials for later use in CLI action",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,6 @@
     "yargs": "^17.6.2"
   },
   "devDependencies": {
-    "@atlassian-partner-engineering/eslint-config": "^4.0.0",
     "@vercel/ncc": "^0.34.0",
     "eslint": "^8.27.0",
     "node-fetch": "^2.6.7",
