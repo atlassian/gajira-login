@@ -11,7 +11,7 @@
     "lint": "eslint",
     "precommit": "run-p lint build"
   },
-  "author": "",
+  "author": "Atlassian <github@atlassian.com>",
   "license": "ISC",
   "dependencies": {
     "husky": "^8.0.2",
