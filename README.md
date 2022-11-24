@@ -42,7 +42,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-More examples at [gajira-demo](https://github.com/atlassian/gajira-demo) repository
+More examples at [gajira](https://github.com/atlassian/gajira) repository
 
 ----
 ## Action Spec:
