@@ -13,7 +13,7 @@ class Jira {
 
   async getMyself () {
     return this.fetch('getMyself',
-      { pathname: '/rest/api/3/myself' }, {
+      { pathname: '/rest/api/2/myself' }, {
         method: 'GET',
       })
   }
@@ -54,7 +54,7 @@ class Jira {
 
   async transitionIssue (issueId, data) {
     return this.fetch('transitionIssue', {
-      pathname: `/rest/api/3/issue/${issueId}/transitions`,
+      pathname: `/rest/api/2/issue/${issueId}/transitions`,
     }, {
       method: 'POST',
       body: data,
