@@ -1,3 +1,7 @@
+---------
+⚠️ This repository isn’t maintained anymore.
+---------
+
 # Jira Login
 
 Used to store credentials for later use by other Jira Actions
