@@ -1,6 +1,6 @@
-const Jira = require('./common/net/Jira')
+import Jira from './common/net/Jira'
 
-module.exports = class {
+export default class {
   constructor ({ githubEvent, argv, config }) {
     this.Jira = new Jira({
       baseUrl: config.baseUrl,

@@ -1,7 +1,7 @@
-const { get } = require('lodash')
+import { get } from 'lodash'
 
 const serviceName = 'jira'
-const { format } = require('url')
+import { format } from 'url'
 const client = require('./client')(serviceName)
 
 class Jira {
@@ -118,4 +118,4 @@ class Jira {
   }
 }
 
-module.exports = Jira
+export default Jira

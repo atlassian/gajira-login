@@ -1,12 +1,12 @@
-const fs = require('fs')
-const path = require('path')
-const YAML = require('yaml')
+import { existsSync, mkdirSync, writeFileSync } from 'fs'
+import { dirname } from 'path'
+import { stringify } from 'yaml'
 
 const cliConfigPath = `${process.env.HOME}/.jira.d/config.yml`
 const cliCredentialsPath = `${process.env.HOME}/.jira.d/credentials`
 const configPath = `${process.env.HOME}/jira/config.yml`
 
-const Action = require('./action')
+import Action from './action'
 
 // eslint-disable-next-line import/no-dynamic-require
 const githubEvent = require(process.env.GITHUB_EVENT_PATH)
@@ -32,22 +32,22 @@ async function exec () {
     if (result) {
       const extendedConfig = Object.assign({}, config, result)
 
-      if (!fs.existsSync(configPath)) {
-        fs.mkdirSync(path.dirname(configPath), { recursive: true })
+      if (!existsSync(configPath)) {
+        mkdirSync(dirname(configPath), { recursive: true })
       }
 
-      fs.writeFileSync(configPath, YAML.stringify(extendedConfig))
+      writeFileSync(configPath, stringify(extendedConfig))
 
-      if (!fs.existsSync(cliConfigPath)) {
-        fs.mkdirSync(path.dirname(cliConfigPath), { recursive: true })
+      if (!existsSync(cliConfigPath)) {
+        mkdirSync(dirname(cliConfigPath), { recursive: true })
       }
 
-      fs.writeFileSync(cliConfigPath, YAML.stringify({
+      writeFileSync(cliConfigPath, stringify({
         endpoint: result.baseUrl,
         login: result.email,
       }))
 
-      fs.writeFileSync(cliCredentialsPath, `JIRA_API_TOKEN=${result.token}`)
+      writeFileSync(cliCredentialsPath, `JIRA_API_TOKEN=${result.token}`)
 
       return
     }
