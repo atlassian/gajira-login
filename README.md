@@ -1,5 +1,5 @@
 ---------
-⚠️ This repository isn’t maintained anymore.
+⚠️ This repository is no longer maintained and all Gajira actions have been deprecated.
 ---------
 
 # Jira Login
@@ -9,12 +9,12 @@ Used to store credentials for later use by other Jira Actions
 > ##### Only supports Jira Cloud. Does not support Jira Server (hosted)
 
 This is required by other actions like:
-- [`Transition`](https://github.com/marketplace/actions/jira-issue-transition) - Transition a Jira issue
-- [`Comment`](https://github.com/marketplace/actions/jira-add-comment) - Add a comment to a Jira issue
-- [`Create`](https://github.com/marketplace/actions/jira-create-issue) - Create a new Jira issue
-- [`Find issue key`](https://github.com/marketplace/actions/jira-find-issue-key) - Search for an issue key in commit message, branch name, etc. This issue key is then saved and used by the next actions in the same workflow
-- [`TODO`](https://github.com/marketplace/actions/jira-issue-from-todo) - Create a Jira issue for each TODO comment in committed code
-- [`CLI`](https://github.com/marketplace/actions/setup-jira) - Wrapped [go-jira](https://github.com/Netflix-Skunkworks/go-jira) CLI for common Jira actions
+- Transition - Transition a Jira issue
+- Comment - Add a comment to a Jira issue
+- Create - Create a new Jira issue
+- Find issue key - Search for an issue key in commit message, branch name, etc. This issue key is then saved and used by the next actions in the same workflow
+- TODO - Create a Jira issue for each TODO comment in committed code
+- CLI - Wrapped [go-jira](https://github.com/Netflix-Skunkworks/go-jira) CLI for common Jira actions
 
 ## Usage
 An example workflow to create a Jira issue for each `//TODO` in code:
